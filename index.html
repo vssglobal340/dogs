@@ -192,13 +192,13 @@
     <a href="#about">About Us</a>
     <a href="#care">Care Programs</a>
     <a href="#videos">Videos</a>
-    <a href="#donate">Donate</a>
+    <a href="#donate">Pay</a>
     <a href="#connect">Connect</a>
 </nav>
 
 <section id="about">
     <h2>About Us</h2>
-    <p>Project Stray Dog Liberation Universal is a compassionate philanthropic initiative founded by VSS Global. We provide shelter, medication, food, and care for vulnerable senior dogs. Our goal is to ensure every stray dog has a safe haven, medical attention, and nutritious meals. We also promote spay and neuter programs to control the stray dog population humanely.</p>
+    <p>Project Stray Dog Liberation Universal is a compassionate initiative founded by VSS Global. We provide shelter, medication, food, and care for vulnerable senior dogs. Our goal is to ensure every stray dog has a safe haven, medical attention, and nutritious meals. We also promote spay and neuter programs to control the stray dog population humanely.</p>
 </section>
 
 <section id="care">
@@ -241,32 +241,47 @@
 </section>
 
 <section id="donate">
-    <h2>Support Us - Donate Now</h2>
-    <p>Your generous contributions help us continue our mission to care for stray dogs. Every donation goes towards providing food, medical care, and shelter to the dogs in need.</p>
+    <h2>Pay for Our Services</h2>
+    <p>If you want to support us by paying for our services, you can make a payment easily using the PayPal "Pay Now" button below.</p>
 
     <div class="cta">
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
-            <!-- PayPal details -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="sadanaritu@hotmail.com">
             <input type="hidden" name="currency_code" value="USD">
 
-            <!-- Donation amount input -->
-            <label for="amount">Donation Amount (USD):</label>
+            <!-- Payment description -->
+            <label for="item_name">Payment for:</label>
+            <select name="item_name" id="item_name" required>
+                <option value="General Support">General Support</option>
+                <option value="Shelter Support">Shelter Support</option>
+                <option value="Medical Care">Medical Care</option>
+                <option value="Spay & Neuter">Spay & Neuter</option>
+            </select>
+            <br><br>
+
+            <!-- Amount input -->
+            <label for="amount">Amount (USD):</label>
             <input type="number" name="amount" id="amount" placeholder="Enter amount" required>
             <br><br>
 
-            <!-- Donor's name -->
-            <label for="name">Your Name:</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
-            <br><br>
+            <!-- Pay Now button -->
+            <input type="submit" value="Pay Now via PayPal">
+        </form>
+    </div>
+</section>
 
-            <!-- Donor's email -->
-            <label for="email">Your Email:</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email" required>
-            <br><br>
+<section id="connect">
+    <h2>Connect with Us</h2>
+    <p>If you're passionate about helping stray dogs, we would love to connect with you. Join us in making a difference.</p>
+    <p>Email: <a href="mailto:dogs@vss1.com">dogs@vss1.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/14375187488" target="_blank">+14375187488</a></p>
+</section>
 
-            <!-- Donation type dropdown -->
-            <label for="donation_type">Donation Type:</label>
-            <select name="item_name" id="donation_type" required>
-                <option value="General Donation">General Donation</option>
-               
+<footer>
+    <p>Project Stray Dog Liberation Universal | Founded by VSS Global</p>
+    <p>Contact us: <a href="mailto:dogs@vss1.com">dogs@vss1.com</a></p>
+</footer>
+
+</body>
+</html>
